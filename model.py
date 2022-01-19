@@ -4,7 +4,8 @@ import pickle
 
 
 def filter_top_five_best(user_input):
-    item_final_rating = pd.read_pickle("pickles/item_based_reco_engine.pkl")
+    item_final_rating = pickle.load(
+        open('pickles/item_based_reco_engine.pkl', 'rb'))
     df = pd.read_csv("pickles/df.csv")
     word_vectorizer = pickle.load(
         open('pickles/tfidf.pkl', 'rb'))
