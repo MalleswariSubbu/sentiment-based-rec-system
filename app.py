@@ -22,7 +22,7 @@ def predict():
     print(username)
     prediction = recommend(username)
     print("Output :", prediction)
-    return render_template('index.html', prediction_text='Your Top 5 Recommendations are:\n {}'.format(prediction))
+    return render_template('index.html', prediction_text='{}'.format(prediction))
     #return prediction[0]
 
 
